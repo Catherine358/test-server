@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
     fs.readFile(__dirname + '/' + 'users.json', 'utf8', (err, data) => {
         console.log(data)
         res.setHeader('Content-Type', 'application/json');
-        res.send(data);
+        res.sendStatus(200).end(data);
     })
 });
 
