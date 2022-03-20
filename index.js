@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 
-app.get('/hives', (req, res) => {
+app.get('/', (req, res) => {
     fs.readFile(__dirname + '/' + 'users.json', 'utf8', (err, data) => {
         console.log(data)
         res.end(data);
