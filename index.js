@@ -17,7 +17,7 @@ app.get('/:hiveId', (req, res) => {
     fs.readFile(__dirname + '/' + 'users.json', 'utf8', (err, data) => {
         console.log(data)
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).send(req.body);
+        res.status(200).send(req.params.hiveId);
     })
 });
 
